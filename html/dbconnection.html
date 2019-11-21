@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://dashdb-txn-sbox-yp-dal09-04.services.dal.bluemix.net/dbapi/v4/auth/tokens",
+  "method": "POST",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "processData": false,
+  "data": "{\"userid\":\"lqd66837\",\"password\":\"jv5kn3p38ls^3674\"}"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+</body>
+</html>

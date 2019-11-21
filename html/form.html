@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Claim Status</title>
+      <link rel="stylesheet" type="text/css" href="view.css" media="all">
+      <script type="text/javascript" src="view.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   </head>
+   <body id="main_body" >
+      <img id="top" src="top.png" alt="">
+	  
+      <div id="form_container">
+         <h1><a>Claim Status</a></h1>
+         <form id="form_90020" class="appnitro"  method="post" action="">
+			
+            <div class="form_description">
+               <h2>Claim Status</h2>
+            </div>
+			<li class="buttons">
+                  <input id="saveForm" class="button" type="button" name="Save" value="Save" />
+            </li>
+            <ul >
+               <h4><a>Claimant Details</a></h4>
+               <li id="li_1" >
+                  <label class="description" for="element_1">Claim Number </label>
+                  <div>
+                     <input id="claim_number" name="element_1" class="element text medium" type="text" maxlength="255" value=""/> 
+                     <input type="button" id="fetch_claim" value="fetch data" />
+                  </div>
+               </li>
+               <li id="li_2" >
+                  <label class="description" for="element_2">Name </label>
+                  <input id="insured_name" name="element_1" class="element text medium" type="text" maxlength="255"
+                         value=""/>
+                  <label class="description" for="element_2">Age </label>
+                  <input id="insured_age" name="element_1" class="element text medium" type="text" maxlength="255"
+                         value=""/>
+               </li>
+               <li id="li_8" >
+                  <label class="description" for="debt">Debt </label>
+                  <span class="symbol">$</span>
+                  <span>
+                  <input id="debt" name="element_8_1" class="element text currency" size="10" value="" type="text" /> .
+
+                  <label for="element_8_1">Dollars</label>
+                  </span>		 
+               </li>
+               <h4><a>Loss Details</a></h4>
+               <li id="li_2" >
+                  <label class="description" for="element_2">Incident Type </label>
+                  <div>
+                     <select class="element select medium" id="incident_type" name="element_2">
+                        <option value="" selected="selected"></option>
+                        <option value="1" >VehicleIncident</option>
+                        <option value="2" >FixedPropertyIncident</option>
+                     </select>
+                  </div>
+               </li>
+               <li id="li_3" >
+                  <label class="description" for="loss_type">Loss Type </label>
+                  <div>
+                     <select class="element select medium" id="loss_type" name="element_3">
+                        <option value="" selected="selected"></option>
+                        <option value="1" >Vehicle</option>
+                        <option value="2" >Person</option>
+                        <option value="3" >Property/Object</option>
+                        <option value="4" >Vandalism</option>
+                        <option value="5" >Animal</option>
+                     </select>
+                  </div>
+               <li id="li_4" >
+                  <label class="description" for="loss_date">Loss date </label>
+                  <div>
+                     <input id="loss_date" name="element_4" class="element text medium" type="text" maxlength="255"
+                            value=""/>
+                  </div>
+               </li>
+               <li id="li_4" >
+                  <label class="description" for="note">Note</label>
+                  <div>
+                     <textarea rows="10" cols="100" id="note" name="element_4" class="element text medium" type="text"
+                               maxlength="255" value=""> </textarea>
+                  </div>
+               </li>
+               <h4> Claim Details </h4>
+               <li id="li_10" >
+                  <label class="description" for="liability_status">Liability Status </label>
+                  <div>
+                     <select class="element select medium" id="liability_status " name="element_10">
+                        <option value="" selected="selected"></option>
+                        <option value="1" >Accept</option>
+                        <option value="2" >Deny</option>
+                        <option value="3" >Contentious</option>
+                     </select>
+                  </div>
+               </li>
+               <li id="li_9" >
+                  <label class="description" for="state">State </label>
+                  <div>
+                     <select class="element select medium" id="state" name="element_9">
+                        <option value="" selected="selected"></option>
+                        <option value="1" >Open</option>
+                        <option value="2" >Close</option>
+                        <option value="3" >Third option</option>
+                     </select>
+                  </div>
+               </li>
+               <li id="li_11" >
+                  <label class="description" for="segment">Segment </label>
+                  <div>
+                     <select class="element select medium" id="segment" name="element_11">
+                        <option value="" selected="selected"></option>
+                        <option value="1" >Non-Injury</option>
+                        <option value="2" >Non-Injury - OOP</option>
+                        <option value="3" >Non-Injury - Commercial Garage</option>
+                        <option value="4" >Injury - Medium Complexity (RO)</option>
+                        <option value="5" >Injury Unrepresented</option>
+                        <option value="6" >Injury - Medium Complexity</option>
+                        <option value="7" >Non-Injury - Commercial</option>
+                        <option value="8" >Injury Low-Risk Represented</option>
+                        <option value="9" >Injury - Low Complexity (RO)</option>
+                        <option value="10" >Injury High-Risk Represented</option>
+                        <option value="11" >Investigative Claims Team</option>
+                        <option value="12" >Catastrophic Injury</option>
+                        <option value="13" >CCC Retained</option>
+                        <option value="14" >Injury - High Complexity (RO)</option>
+                        <option value="15" >Injury - Employee (RO)</option>
+                        <option value="16" >Injury - OOP</option>
+                        <option value="17" >Injury - Fatality</option>
+                        <option value="18" >Injury - Unrepresented - GCS Team</option>
+                        <option value="19" >Accident Benefits Only</option>
+                        <option value="20" >Investigative Claims Team (HR Rep)</option>
+                        <option value="21" >Non-Injury - Coverage Unit</option>
+                        <option value="22" >Injury - OOP Represented</option>
+                        <option value="23" >Injury - Aligned Firm</option>
+                        <option value="24" >Injury - Aligned Firm (RO)</option>
+                        <option value="25" >Injury - Unrepresented - GCS Triage</option>
+                        <option value="26" >Injury - Low Complexity</option>
+                        <option value="27" >Investigative Claims Team</option>
+                     </select>
+                  </div>
+               </li>
+               <li id="li_12" >
+                  <label class="description" for="element_12">Is Investigated </label>
+                  <div>
+                     <select class="element select medium" id="investigated" name="element_12">
+                        <option value="" selected="selected"></option>
+                        <option value="1" >Yes</option>
+                        <option value="2" >No</option>
+                     </select>
+                  </div>
+               </li>
+               
+            </ul>
+         </form>
+         <div id="footer">
+         </div>
+      </div>
+      <img id="bottom" src="bottom.png" alt="">
+      <div class="fraud-green" id="fraud_color">
+         <h3>Fraud Alert</h3>
+         <img src="https://img.icons8.com/carbon-copy/100/000000/box-important.png"> 
+         <div>Fraud risk <span id="fraud_percentage" style="font-weight:bolder">10%</span></div>
+      </div>
+      <script type="text/javascript" src="app.js"></script>
+   </body>
+</html>
