@@ -11,10 +11,10 @@ WML_CREDENTIALS = {
 }
 
 SCHEMA = {
-    "CLAIM_NUMBER", "INCIDENT_TYPE",
-    "LOSS_TYPE", "STATE", "LIABILITY", "SEGMENT",
-    "INVESTIGATED", "LOSS_DATE", "POLICY_EFFECTIVE",
-    "POLICY_EXPIRATION", "INSURED_NAME", "INSURED_AGE", "DEBT"
+    'INCIDENT_TYPE', 'Y', 'LOSS_TYPE', 'STATE', 'LIABILITY',
+    'SEGMENT', 'INVESTIGATED', 'INSURED_AGE', 'DEBT', 'INSURED_NAME',
+    'policy_inception_days', 'days_rem_policy_expiry', 'loss_date_month', 'loss_date_year',
+    'policy_expiration_month', 'policy_expiration_year', 'policy_effective_month', 'policy_effective_year'
 }
 
 
