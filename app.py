@@ -41,7 +41,7 @@ def update_record(claim_number):
     database.updateRecord(conn,
                           table_name,
                           claim_number,
-                          request.form.keys)
+                          request.form)
     percent, row = get_fraud_percent_by_claim_no(conn, claim_number)
     return percent
 
