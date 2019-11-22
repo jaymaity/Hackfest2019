@@ -29,44 +29,44 @@ var updateStatus= function(data, status){
 var getPredictionDataFromPage = function(){
     var arrayPredict =
     {
-         INCIDENT_TYPE : ("#incident_type").val(),
-         Y : ("#y").val(),
-         LOSS_TYPE : ("#loss_type").val(),
-         STATE : ("#state").val(),
-         LIABILITY : ("#liability").val(),
-         SEGMENT : ("#segment").val(),
-         INVESTIGATED : ("#investigated").val(),
-         INSURED_AGE : ("#insured_age").val(),
-         DEBT : ("#debt").val(),
-         CLAIM_NUMBER : ("#claim_number").val(),
-         INSURED_NAME : ("#insured_name").val(),
-         policy_inception_days : ("#policy_inception_days").val(),
-         days_rem_policy_expiry : ("#days_rem_policy_expiry").val(),
-         loss_date_month : ("#loss_date_month").val(),
-         loss_date_year : ("#loss_date_year").val(),
-         policy_expiration_month : ("#policy_expiration_month").val(),
-         policy_expiration_year : ("#policy_expiration_year").val(),
-         policy_effective_month : ("#policy_effective_month").val(),
-         policy_effective_year : ("#policy_effective_year").val(),
-         LOSS_DATE : ("#loss_date").val(),
-         POLICY_EFFECTIVE : ("#policy_effective").val(),
-         POLICY_EXPIRATION : ("#policy_expiration").val(),
-         potential_fraudster : ("#potential_fraudster").val(),
-         fraud_complete : ("#fraud_complete").val(),
-         fraud_risk_level : ("#fraud_risk_level").val(),
-         fraud_used : ("#fraud_used").val(),
-         location_address : ("#location_address").val(),
-         hit_and_run_ind : ("#hit_and_run_ind").val(),
-         icbc_keymissingstolen : ("#icbc_keymissingstolen").val(),
-         icbc_keyswithvehicle : ("#icbc_keyswithvehicle").val(),
-         icbc_numvehiclekeyset : ("#icbc_numvehiclekeyset").val(),
-         totalloss : ("#totalloss").val(),
-         vehlockind : ("#vehlockind").val(),
-         vehstolenind : ("#vehstolenind").val(),
-         veh_towed_ind : ("#veh_towed_ind").val(),
-         case_status : ("#case_status").val(),
-         notes : ("#notes").val(),
-         pred_fraud_percent : ("#pred_fraud_percent").val()
+         INCIDENT_TYPE : $("#incident_type").val(),
+         case_status : $("#case_status").val(),
+         LOSS_TYPE : $("#loss_type").val(),
+         STATE : $("#state").val(),
+         LIABILITY : $("#liability").val(),
+         SEGMENT : $("#segment").val(),
+         INVESTIGATED : $("#investigated").val(),
+         INSURED_AGE : $("#insured_age").val(),
+         DEBT : $("#debt").val(),
+         CLAIM_NUMBER : $("#claim_number").val(),
+         INSURED_NAME : $("#insured_name").val(),
+         policy_inception_days : $("#policy_inception_days").val(),
+         days_rem_policy_expiry : $("#days_rem_policy_expiry").val(),
+         loss_date_month : $("#loss_date_month").val(),
+         loss_date_year : $("#loss_date_year").val(),
+         policy_expiration_month : $("#policy_expiration_month").val(),
+         policy_expiration_year : $("#policy_expiration_year").val(),
+         policy_effective_month : $("#policy_effective_month").val(),
+         policy_effective_year : $("#policy_effective_year").val(),
+         LOSS_DATE : $("#loss_date").val(),
+         POLICY_EFFECTIVE : $("#policy_effective").val(),
+         POLICY_EXPIRATION : $("#policy_expiration").val(),
+         potential_fraudster : $("#potential_fraudster").val(),
+         fraud_complete : $("#fraud_complete").val(),
+         fraud_risk_level : $("#fraud_risk_level").val(),
+         fraud_used : $("#fraud_used").val(),
+         location_address : $("#location_address").val(),
+         hit_and_run_ind : $("#hit_and_run_ind").val(),
+         icbc_keymissingstolen : $("#icbc_keymissingstolen").val(),
+         icbc_keyswithvehicle : $("#icbc_keyswithvehicle").val(),
+         icbc_numvehiclekeyset : $("#icbc_numvehiclekeyset").val(),
+         totalloss : $("#totalloss").val(),
+         vehlockind : $("#vehlockind").val(),
+         vehstolenind : $("#vehstolenind").val(),
+         veh_towed_ind : $("#veh_towed_ind").val(),
+         case_status : $("#case_status").val(),
+         NOTES : $("#notes").val(),
+         pred_fraud_percent : $("#pred_fraud_percent").val()
     }
     console.log(arrayPredict)
     return arrayPredict
@@ -78,7 +78,7 @@ var updateFormData = function(data){
         console.log(jsondata)
         debugger;
         $("#incident_type").val(jsondata.INCIDENT_TYPE)
-        $("#y").val(jsondata.Y)
+        $("#case_status").val(jsondata.case_status)
         $("#loss_type").val(jsondata.LOSS_TYPE)
         $("#state").val(jsondata.STATE)
         $("#liability_status").val(jsondata.LIABILITY)
@@ -113,7 +113,7 @@ var updateFormData = function(data){
         $("#vehstolenind").val(jsondata.vehstolenind)
         $("#veh_towed_ind").val(jsondata.veh_towed_ind)
         $("#case_status").val(jsondata.case_status)
-        $("#notes").val(jsondata.notes)
+        $("#notes").val(jsondata.NOTES)
         $("#pred_fraud_percent").val(jsondata.pred_fraud_percent)
 
 

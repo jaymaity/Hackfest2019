@@ -13,8 +13,11 @@ def fetchRecord(conn, tableName ,ClaimNumber):
               'FROM '+ tableName + ' '
               'WHERE CLAIM_NUMBER=?',
               number)
-
-    return dict(c.fetchone())
+    row = c.fetchone()
+    if row:
+        return dict(row)
+    else:
+        return None
 
 # update all records of the claim number from a table
 def updateRecord(conn,tableName, ClaimNumber, Params):

@@ -11,8 +11,59 @@ WML_CREDENTIALS = {
 }
 
 SCHEMA = {
-    "CLAIM_NUMBER", "INCIDENT_TYPE", "ACTIONTAKEN", "LOSS_TYPE", "STATE", "LIABILITY", "SEGMENT", "INVESTIGATED", "LOSS_DATE", "POLICY_EFFECTIVE", "POLICY_EXPIRATION", "INSURED_NAME", "INSURED_AGE", "DEBT", "potential_fraudster", "Fraud_complete", "fraud_potential", "fraud_risk_level", "fraud_used", "hit_and_run_ind", "icbc_keymissingstolen", "icbc_keyswithvehicle", "icbc_numvehiclekeyset", "totalloss", "vehlockind", "vehstolenind", "veh_towed_ind", "policy_inception_days", "days_rem_policy_expiry", "loss_date_month", "loss_date_year", "policy_expiration_month", "policy_expiration_year", "policy_effective_month", "policy_effective_year", "NOTES"
+    "CLAIM_NUMBER",
+    "INCIDENT_TYPE",
+    "ACTIONTAKEN",
+    "LOSS_TYPE",
+    "STATE",
+    "LIABILITY",
+    "SEGMENT",
+    "INVESTIGATED",
+    "LOSS_DATE",
+    "POLICY_EFFECTIVE",
+    "POLICY_EXPIRATION",
+    "INSURED_NAME",
+    "INSURED_AGE",
+    "DEBT",
+    "potential_fraudster",
+    "Fraud_complete",
+    "fraud_potential",
+    "fraud_risk_level",
+    "fraud_used",
+    "hit_and_run_ind",
+    "icbc_keymissingstolen",
+    "icbc_keyswithvehicle",
+    "icbc_numvehiclekeyset",
+    "totalloss",
+    "vehlockind",
+    "vehstolenind",
+    "veh_towed_ind",
+    "case_status",
+    "policy_inception_days",
+    "days_rem_policy_expiry",
+    "loss_date_month",
+    "loss_date_year",
+    "policy_expiration_month",
+    "policy_expiration_year",
+    "policy_effective_month",
+    "policy_effective_year",
+    "NOTES"
 }
+
+NULL_LIST = {"CLAIM_NUMBER",
+             "STATE",
+             "LOSS_DATE",
+             "POLICY_EFFECTIVE",
+             "POLICY_EXPIRATION",
+             "Fraud_complete",
+             "hit_and_run_ind",
+             "vehstolenind",
+             "veh_towed_ind",
+             "NOTES",
+             "policy_effective_month"
+             }
+
+
 
 
 def predict(parameters):
@@ -48,10 +99,13 @@ def parse_json_values(json_string, schema):
     for key in params:
         if key in schema:
             keys.append(key)
-            values.append(params[key])
+            if key in NULL_LIST:
+                values.append(None)
+            else:
+                values.append(params[key])
 
     # Taking care of key that are not present
-    non_populated_keys = schema - set(keys)
+    non_populated_keys = set(schema) - set(keys)
     for key in non_populated_keys:
         keys.append(key)
         values.append(None)
