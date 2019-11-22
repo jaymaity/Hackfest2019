@@ -1,7 +1,9 @@
 key_url = "https://us-south.ml.cloud.ibm.com"
-api_key = "V_BGqT6OUXs6eJjcvH31rNcUPhcAAWLo5rRRMquzsMNO"
-instance_id = "7ed6a087-08c3-43c5-8664-6f7bef679738"
+api_key = "71iWbkc0Pt9GoU5BJ1VwUjQbJIZB6UNyeT9JlZIPeEuf"
+instance_id = "f4644553-2b20-4b11-86d3-b90b0d6ceeed"
 
-deployment_url = "https://us-south.ml.cloud.ibm.com/v4/deployments/1b043d64-1471-409b-922f-1dae4dec9459/predictions"
+deployment_url = "https://us-south.ml.cloud.ibm.com/v4/deployments/cb1d3ec6-7856-4e5d-b7c9-9c03e07be6ca/predictions"
 
 database_name = "fraud_detection.db"
+
+table_name = "ClaimsFraudPrepT"

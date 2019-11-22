@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Table Data Addition</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    var url = "http://127.0.0.1:5000/"
+        var $table = $('#table');
+        $.get(url+"report",
+          function(mydata, status){
+          console.log(mydata)
+              $(function () {
+                $('#table').bootstrapTable({
+                    data: JSON.parse(mydata)
+                });
+            });
+          });
+        });
+
+
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <table id="table" data-height="460">
+        <thead>
+        <tr>
+            <th data-field="CLAIM_NUMBER">Claim Number</th>
+            <th data-field="INSURED_NAME">Insured Name</th>
+            <th data-field="pred_fraud_percent">Percent Fraud</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+</body>

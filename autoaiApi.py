@@ -11,10 +11,7 @@ WML_CREDENTIALS = {
 }
 
 SCHEMA = {
-    'INCIDENT_TYPE', 'Y', 'LOSS_TYPE', 'STATE', 'LIABILITY',
-    'SEGMENT', 'INVESTIGATED', 'INSURED_AGE', 'DEBT', 'INSURED_NAME',
-    'policy_inception_days', 'days_rem_policy_expiry', 'loss_date_month', 'loss_date_year',
-    'policy_expiration_month', 'policy_expiration_year', 'policy_effective_month', 'policy_effective_year'
+    "CLAIM_NUMBER", "INCIDENT_TYPE", "ACTIONTAKEN", "LOSS_TYPE", "STATE", "LIABILITY", "SEGMENT", "INVESTIGATED", "LOSS_DATE", "POLICY_EFFECTIVE", "POLICY_EXPIRATION", "INSURED_NAME", "INSURED_AGE", "DEBT", "potential_fraudster", "Fraud_complete", "fraud_potential", "fraud_risk_level", "fraud_used", "hit_and_run_ind", "icbc_keymissingstolen", "icbc_keyswithvehicle", "icbc_numvehiclekeyset", "totalloss", "vehlockind", "vehstolenind", "veh_towed_ind", "policy_inception_days", "days_rem_policy_expiry", "loss_date_month", "loss_date_year", "policy_expiration_month", "policy_expiration_year", "policy_effective_month", "policy_effective_year", "NOTES"
 }
 
 
@@ -32,8 +29,8 @@ def predict(parameters):
     scoring_payload = {"input_data": [{"fields": fields, "values": [values]}]}
     predictions = client.deployments.score(deployment_url, scoring_payload)
 
-    is_fraud = predictions["predictions"][0]["values"][0][0]
-    fraud_percentage = predictions["predictions"][0]["values"][0][1][2]
+    is_fraud = predictions["predictions"][0]["values"][0][0] == 1.0
+    fraud_percentage = predictions["predictions"][0]["values"][0][1][1]
 
     return is_fraud, fraud_percentage
 

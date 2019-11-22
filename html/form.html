@@ -52,8 +52,8 @@
                   <div>
                      <select class="element select medium" id="incident_type" name="element_2">
                         <option value="" selected="selected"></option>
-                        <option value="1" >VehicleIncident</option>
-                        <option value="2" >FixedPropertyIncident</option>
+                        <option value="VehicleIncident" >VehicleIncident</option>
+                        <option value="FixedPropertyIncident" >FixedPropertyIncident</option>
                      </select>
                   </div>
                </li>
@@ -62,11 +62,11 @@
                   <div>
                      <select class="element select medium" id="loss_type" name="element_3">
                         <option value="" selected="selected"></option>
-                        <option value="1" >Vehicle</option>
-                        <option value="2" >Person</option>
-                        <option value="3" >Property/Object</option>
-                        <option value="4" >Vandalism</option>
-                        <option value="5" >Animal</option>
+                        <option value="Vehicle" >Vehicle</option>
+                        <option value="Person" >Person</option>
+                        <option value="Property/Object" >Property/Object</option>
+                        <option value="Vandalism" >Vandalism</option>
+                        <option value="Animal" >Animal</option>
                      </select>
                   </div>
                <li id="li_4" >
@@ -87,11 +87,11 @@
                <li id="li_10" >
                   <label class="description" for="liability_status">Liability Status </label>
                   <div>
-                     <select class="element select medium" id="liability_status " name="element_10">
+                     <select class="element select medium" id="liability_status" name="element_10">
                         <option value="" selected="selected"></option>
-                        <option value="1" >Accept</option>
-                        <option value="2" >Deny</option>
-                        <option value="3" >Contentious</option>
+                        <option value="Accept" >Accept</option>
+                        <option value="Deny" >Deny</option>
+                        <option value="Contentious" >Contentious</option>
                      </select>
                   </div>
                </li>
@@ -100,9 +100,8 @@
                   <div>
                      <select class="element select medium" id="state" name="element_9">
                         <option value="" selected="selected"></option>
-                        <option value="1" >Open</option>
-                        <option value="2" >Close</option>
-                        <option value="3" >Third option</option>
+                        <option value="Open" >Open</option>
+                        <option value="Closed" >Close</option>
                      </select>
                   </div>
                </li>
@@ -146,8 +145,8 @@
                   <div>
                      <select class="element select medium" id="investigated" name="element_12">
                         <option value="" selected="selected"></option>
-                        <option value="1" >Yes</option>
-                        <option value="2" >No</option>
+                        <option value="Yes" >Yes</option>
+                        <option value="No" >No</option>
                      </select>
                   </div>
                </li>
@@ -162,6 +161,36 @@
          <h3>Fraud Alert</h3>
          <img src="https://img.icons8.com/carbon-copy/100/000000/box-important.png"> 
          <div>Fraud risk <span id="fraud_percentage" style="font-weight:bolder">10%</span></div>
+      </div>
+      <div>
+         <input type="hidden" id="y" />
+         <input type="hidden" id="policy_inception_days" />
+         <input type="hidden" id="days_rem_policy_expiry" />
+         <input type="hidden" id="loss_date_month" />
+         <input type="hidden" id="loss_date_year" />
+         <input type="hidden" id="policy_expiration_month" />
+         <input type="hidden" id="policy_expiration_year" />
+         <input type="hidden" id="policy_effective_month" />
+         <input type="hidden" id="policy_effective_year" />
+         <input type="hidden" id="policy_effective" />
+         <input type="hidden" id="policy_expiration" />
+         <input type="hidden" id="potential_fraudster" />
+         <input type="hidden" id="fraud_complete" />
+         <input type="hidden" id="fraud_risk_level" />
+         <input type="hidden" id="fraud_used" />
+         <input type="hidden" id="location_address" />
+         <input type="hidden" id="hit_and_run_ind" />
+         <input type="hidden" id="icbc_keymissingstolen" />
+         <input type="hidden" id="icbc_numvehiclekeyset" />
+         <input type="hidden" id="totalloss" />
+         <input type="hidden" id="vehlockind" />
+         <input type="hidden" id="vehstolenind" />
+         <input type="hidden" id="veh_towed_ind" />
+         <input type="hidden" id="case_status" />
+         <input type="hidden" id="pred_fraud_percent" />
+
+
+
       </div>
       <script type="text/javascript" src="app.js"></script>
    </body>
